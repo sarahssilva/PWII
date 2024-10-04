@@ -6,7 +6,7 @@
     && isset($_POST["codigodebarras"])
     && isset($_POST["datavalidade"]))
     {
-        if(empty($_POST["nome"])){
+         if(empty($_POST["nome"])){
             echo "<br><div class = 'alert alert-danger'>
             Campo nome não pode estar em branco</div>";
         }
@@ -22,8 +22,25 @@
             echo "<br><div class = 'alert alert-danger'>
             Campo data de validade não pode estar em branco</div>";
         }else{
+            include "conexao.php";
+
+            $nome = $_POST["nome"];
+            $valor = str_replace(",", ".", $_POST )$_POST["valor"];
+            $codigobarras = $_POST["codigobarras"];
+
+            $query = "INSERT INTO produtos (DESCRIÇÃO, VALOR, CODIGO_BARRAS, ATIVO) 
+            value ('$nome', $valor, '$codigobarras', 1)";
+
+            $resultado = $conexao->query($query);
+            if($resultado){
+                echo "<div class='alert alert-success'>
+                Salvo no banco com sucesso
+                </div>";
+            }
+
             //Executa a lógica do programa
             //Salvar no banco
+            echo "<h1> Salvo no banco de dados com sucesso </h1>";
         }
     }
 ?>
