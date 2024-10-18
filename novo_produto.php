@@ -25,7 +25,7 @@
             include "conexao.php";
 
             $nome = $_POST["nome"];
-            $valor = str_replace(",", ".", $_POST )$_POST["valor"];
+            $valor = str_replace(",", ".", $_POST["valor"] );
             $codigobarras = $_POST["codigobarras"];
 
             $query = "INSERT INTO produtos (DESCRIÇÃO, VALOR, CODIGO_BARRAS, ATIVO) 
