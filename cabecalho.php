@@ -54,6 +54,12 @@
         <li class="nav-item">
           <a class="nav-link"  href="produtos.php">Produtos</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link"  href="editar_produto.php">Editar produtos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  href="categoria.php">Categorias</a>
+        </li>
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
