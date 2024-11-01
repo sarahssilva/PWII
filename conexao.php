@@ -41,8 +41,15 @@ $script = "
 
     CREATE TABLE CATEGORIAS(
         ID INT PRIMARY KEY AUTO_INCREMENT,
-        NOME VARCHAR(80) NOT NULL,
+        NOME VARCHAR(80) NOT NULL
     );
+
+    INSERT INTO CATEGORIAS VALUE
+        ('Eletronicos'),
+        ('Eletrodomesticos'),
+        ('Sapato'),
+        ('Roupas');
+
 
     
 ";
