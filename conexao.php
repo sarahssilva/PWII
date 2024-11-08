@@ -49,7 +49,9 @@ $script = "
         ('Eletronicos'),
         ('Eletrodomesticos'),
         ('Sapato'),
-        ('Roupas');
+        ('Roupas'),
+        ('Itens de Casa'),
+        ('Itens de Casa');
 
         ALTER TABLE PRODUTOS
         ADD COLUMN CATEGORIA_ID INT;
@@ -57,6 +59,13 @@ $script = "
         ALTER TABLE PRODUTOS
         ADD CONSTRAINT FK_PRODUTOS_CATEGORIAS
         FOREIGN KEY (CATEGORIA_ID) REFERENCES CATEGORIAS ( ID );
+
+        CREATE TABLE USUARIOS (
+            ID INT PRIMARY KEY AUTO_INCREMENT,
+            LOGIN VARCHAR(50) NOT NULL,
+            SENHA VARCHAR(80) NOT NULL,
+            ATIVO BIT DEFAULT 1
+        );
     
 
     
