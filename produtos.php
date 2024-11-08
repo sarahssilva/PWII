@@ -89,7 +89,7 @@ else
                                 <th scope="col">Descrição</th>
                                 <th scope="col">Valor</th>
                                 <th scope="col">Código de barras</th>
-                                <th scope="col">Imagem</th>
+                                <th scope="col">Imagem<th>
                                 <th scope="col"></th>
                             </tr>
                         </thead>
