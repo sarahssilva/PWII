@@ -44,12 +44,20 @@ $script = "
         NOME VARCHAR(80) NOT NULL
     );
 
-    INSERT INTO CATEGORIAS VALUE
+    INSERT INTO CATEGORIAS (NOME)
+    VALUES
         ('Eletronicos'),
         ('Eletrodomesticos'),
         ('Sapato'),
         ('Roupas');
 
+        ALTER TABLE PRODUTOS
+        ADD COLUMN CATEGORIA_ID INT;
+
+        ALTER TABLE PRODUTOS
+        ADD CONSTRAINT FK_PRODUTOS_CATEGORIAS
+        FOREIGN KEY (CATEGORIA_ID) REFERENCES CATEGORIAS ( ID );
+    
 
     
 ";
